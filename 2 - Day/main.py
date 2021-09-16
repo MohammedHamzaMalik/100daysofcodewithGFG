@@ -21,24 +21,23 @@ class Solution:
     #be performed in a meeting room.
     def maximumMeetings(self,n,start,end):
         # code here
-        ans = []
-        l = []
+        final_meetings = []
+        total_meetings = []
  
         for i in range(n):
-            l.append(meeting(start[i], end[i], i))
+            total_meetings.append(meeting(start[i], end[i], i))
             
-        l.sort(key = lambda x: x.end)
-     
-        ans.append(l[0].pos)
+        sorted(total_meetings,key = lambda x: x.end)
+        final_meetings.append(total_meetings[0].pos)
     
-        time_limit = l[0].end
+        time_limit = total_meetings[0].end
         
         for i in range(1, n):
-            if l[i].start > time_limit:
-                ans.append(l[i].pos)
-                time_limit = l[i].end
+            if total_meetings[i].start > time_limit:
+                final_meetings.append(total_meetings[i].pos)
+                time_limit = total_meetings[i].end
              
-        return len(ans)
+        return len(final_meetings)
         
 #{ 
 #  Driver Code Starts
