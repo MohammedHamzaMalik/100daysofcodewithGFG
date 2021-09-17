@@ -50,6 +50,9 @@ In this I have simply used the for loops and if condition.
 1 -> first I have made a new array in which I will be storing the elements of both of the arrays
 2 -> then I have iterated over the first array and added of its element in the final array
 3 -> similarly I have done the same process on the second array
-4 -> then using sort built-in method I have sorted the final array (you can use any of the sorting method)
-5 -> then I have iterated over the final array and checked if the position of any of the element of the final array is eqaul to k. If yes then I have returned the element just before the position which is equal to k.  
+4 -> then using sort built-in method I have sorted the final array (you can use any of the 
+     sorting method)
+5 -> then I have iterated over the final array and checked if the position of any of the element
+     of the final array is eqaul to k. If yes then I have returned the element just before the 
+     position which is equal to k.  
 '''
