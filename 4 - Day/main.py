@@ -1,3 +1,8 @@
+'''
+Problem of the day: Sum of Query II
+You are given an array arr[] of n integers and q queries in an array queries[] of length 2*q containing l, r pair for all q queries. You need to compute the following sum over q queries.
+If you want more idea about the problem visit this link: https://practice.geeksforgeeks.org/problems/sum-of-query-ii5310/1#  
+'''
 #User function Template for python3
 
 def sum_of_query(arr,l,r):
@@ -40,3 +45,13 @@ if __name__ == '__main__':
             print(it,end=" ")
         print()
 # } Driver Code Ends
+
+'''
+Explanation:
+1 -> First I made a function sum_of_query with an array,l and r as three its parameters that will return the sum of a query.
+2 -> This function contains a variable that will store the sum of that query.
+3 -> then I have iterated over a range of starting and ending point of the query & added the value of array elements to the variable.
+4 -> then in the main function I have made a new list which will contain the sum of each query.
+5 -> then using a for loop I iterated over the range of q and added the sum of each query to the new list using the previously made function.
+     and this main function will return the list containing the sum of each query.
+'''
