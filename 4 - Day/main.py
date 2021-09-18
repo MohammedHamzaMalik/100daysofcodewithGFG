@@ -48,6 +48,7 @@ if __name__ == '__main__':
 
 '''
 Explanation:
+Step by step explanation is provided below:
 1 -> First I made a function sum_of_query with an array,l and r as three its parameters that will return the sum of a query.
 2 -> This function contains a variable that will store the sum of that query.
 3 -> then I have iterated over a range of starting and ending point of the query & added the value of array elements to the variable.
