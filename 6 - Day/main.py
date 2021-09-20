@@ -29,3 +29,11 @@ if __name__ == '__main__':
         print()
     
 # } Driver Code Ends
+
+'''
+Explanation:
+1 -> first I have madea variable fact and assigned it a value of 1
+2 -> using a simplw while loop from 1 to N
+3 -> in the while loop I have multiplied fact with N untill the loop stops
+4 -> at last I have returned the value of fact by typecasting it with the string.
+'''
