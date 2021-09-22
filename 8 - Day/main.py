@@ -1,3 +1,7 @@
+'''
+Problem: Repeated String Match
+Given two strings A and B, find the minimum number of times A has to be repeated such that B becomes a substring of the repeated A. If B cannot be a substring of A no matter how many times it is repeated, return -1.
+'''
 #User function Template for python3
 def checking_substring(a,b):
     for i in a:
@@ -43,3 +47,12 @@ if __name__=="__main__":
         obj = Solution()
         print(obj.repeatedStringMatch(A,B))
 # } Driver Code Ends
+
+'''
+Explanation:
+1 -> first made two variables that will store the length of both strings respectively
+2 -> then iterate over the length of 'A' string using a for or while loop
+3 -> then we check the one index of 'B' string with every index of string 'A', as 'B' will start with the same alphabet as one of the index of 'A'.
+4 -> then assinging that index value to a variable 'k', and making a new variable for counting how much time a is repeated
+5 -> then iterate over 'B' string and increment count as we make k zero again.
+'''
