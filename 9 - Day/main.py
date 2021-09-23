@@ -1,35 +1,32 @@
+'''
+Problem: Count total set bits
+You are given a number N. Find the total count of set bits for all numbers from 1 to N(both inclusive).
+For more information visit this link: https://practice.geeksforgeeks.org/problems/count-total-set-bits-1587115620/1#
+'''
 #User function Template for python3
 # def DecimalToBinary(num):
 #     return bin(num).replace("0b", "")
-
 
 class Solution:
     #Function to return sum of count of set bits in the integers from 1 to n.
     def countSetBits(self,n):
         # code here
-        two = 2
-        ans = 0
-        N = n
-        while(n != 0):
-            ans += int(N / two) * (two >> 1)
-            if((N & (two - 1)) > (two >> 1) - 1):
-                ans += (N&(two - 1)) - (two >> 1) + 1
-            two <<= 1;
-            n >>= 1;
+        i,ans = 0,0
+        
+        while ((1 << i) <= n) :
+            k = 0
+            change = 1 << i
+            j=0
+            while(j<n+1):
+                ans += k
+                if change == 1 :
+                    k = not k
+                    change = 1 << i
+                else :
+                    change -= 1
+                j+=1
+            i += 1
         return ans
-        # return the count
-        # x=0
-        # arr=[]
-        # for i in range(n):
-        #     b=DecimalToBinary(i)
-        #     arr.append(b)
-            
-        # for i in arr:
-        #     for j in i:
-        #         if i==1:
-        #             x+=1
-                    
-        # return x
         
 #{ 
 #  Driver Code Starts
@@ -40,3 +37,14 @@ if __name__=="__main__":
         ob=Solution()
         print(ob.countSetBits(int(input())))
 # } Driver Code Ends
+
+'''
+Explanation:
+Using a simple approach that the bits get inverted after 2^i position in vertical sequence if observed from the rightmost side at a distance of i.
+1 -> first create two variables one for iterating while loop and second to store our answer.
+2 -> using a while loop iterate till n is greater than equal to 2^i
+3 -> then again loop from 0 to n for every bit position.
+4 -> then add the value to our ans variable.
+5 -> then check if the iterator is equal to 1 then flip the bit and again set it to 2^i
+6 -> at last return the ans variable.
+'''
