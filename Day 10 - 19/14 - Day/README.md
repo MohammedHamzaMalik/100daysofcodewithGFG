@@ -20,3 +20,5 @@ The approach is to use recursion to keep all values in the Function Call Stack u
 8. After that push the top item ***temp*** back in the sorted stack.
 9. At last in the main sorted function, implement the ***second function*** which we created earlier.
 10. Till now we get the stack that is ***sorted***, but we want the stack in ***reverse sorted manner***, so use the *reverse method* on the ***stack*.** 
+
+Reference: [GeeksforGeeks](https://www.geeksforgeeks.org/sort-a-stack-using-recursion/)
