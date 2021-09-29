@@ -3,8 +3,8 @@
 class Solution: 
     def candies(self, m,n): 
         # Your code goes here 
-		# ans=int(((m-1)*(n-1)/2))
-		i = 0
+	# ans=int(((m-1)*(n-1)/2))
+	i = 0
     	X = (m * n) - m - n
 
     	queue = []
