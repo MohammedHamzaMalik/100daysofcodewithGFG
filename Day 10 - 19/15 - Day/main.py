@@ -14,7 +14,7 @@ class Solution:
     	ans = 0
     	while (len(queue) > 0):
     		curr = queue[0] 
-    		queue.remove(queue[0])
+    		queue.remove(curr)
 
     		ans += 1
     		key = curr-m
