@@ -29,4 +29,5 @@ For more info. visit this [link](https://practice.geeksforgeeks.org/problems/pri
 5. Then store nodes in left subtree.
 6. Then store nodes in right subtree.
 7. In the main function, create a map and store vertical order in map.
-8. 
+8. Use the previously created function.
+9. Traverse the map and add the nodes at every horizontal distance in our result.
