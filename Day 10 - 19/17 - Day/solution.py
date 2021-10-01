@@ -2,18 +2,28 @@
 
 
 class Solution:
-    
-    #Function to check whether a Binary Tree is BST or not.
-    def isBST(self, node, mini=-4294967296, maxi=4294967296):
-        #code here
+    # Retusn true if the given tree is a BST and its values
+    # >= min and <= max
+    def isBSTUtil(self,node, mini, maxi):
+         
+        # An empty tree is BST
         if node is None:
             return True
      
+        # False if this node violates min/max constraint
         if node.data < mini or node.data > maxi:
             return False
-            
-        return (self.isBST(node.left, mini, node.data -1) and self.isBST(node.right, node.data+1, maxi))
-        
+     
+        # Otherwise check the subtrees recursively
+        # tightening the min or max constraint
+        return (self.isBSTUtil(node.left, mini, node.data -1) and
+              self.isBSTUtil(node.right, node.data+1, maxi))
+    #Function to check whether a Binary Tree is BST or not.
+    def isBST(self, root):
+        #code here
+        return (self.isBSTUtil(root,mini=-4294967296, maxi=4294967296))
+ 
+    
 
 #{ 
 #  Driver Code Starts
@@ -94,3 +104,5 @@ if __name__=="__main__":
         else:
             print(0)
 # } Driver Code Ends
+
+# Reference: https://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/
