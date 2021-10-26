@@ -45,4 +45,4 @@ int main() {
         cout << obj.minTime(dependency, duration, n, m) << endl;
     }
     return 0;
-}  // } Driver Code Ends
+}  // } Driver Code Ends.
